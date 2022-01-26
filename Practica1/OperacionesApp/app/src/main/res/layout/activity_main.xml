@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/Textnum1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="114dp"
+        android:ems="10"
+        android:hint="Ingrese primer valor"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#78909C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Textnum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="Ingrese segundo valor"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/Textnum1"
+        app:layout_constraintTop_toBottomOf="@+id/Textnum1" />
+
+    <Button
+        android:id="@+id/Sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="12dp"
+        android:onClick="suma"
+        android:text="Suma"
+        app:layout_constraintBottom_toTopOf="@+id/Mult"
+        app:layout_constraintEnd_toStartOf="@+id/Rest" />
+
+    <Button
+        android:id="@+id/Rest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="3dp"
+        android:onClick="rest"
+        android:text="Restar"
+        app:layout_constraintEnd_toEndOf="@+id/Textnum2"
+        app:layout_constraintTop_toBottomOf="@+id/Textnum2" />
+
+    <Button
+        android:id="@+id/Mult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="35dp"
+        android:onClick="multi"
+        android:text="Multiplicar"
+        app:layout_constraintEnd_toEndOf="@+id/Rest"
+        app:layout_constraintTop_toBottomOf="@+id/Rest" />
+
+    <Button
+        android:id="@+id/Div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="13dp"
+        android:onClick="divi"
+        android:text="Dividir"
+        app:layout_constraintStart_toStartOf="@+id/Mult"
+        app:layout_constraintTop_toBottomOf="@+id/Mult" />
+
+    <TextView
+        android:id="@+id/Re"
+        android:layout_width="101dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="32dp"
+        android:text="Resultado"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/Div"
+        app:layout_constraintStart_toStartOf="@+id/Div"
+        app:layout_constraintTop_toBottomOf="@+id/Div" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Calculadora basica"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
