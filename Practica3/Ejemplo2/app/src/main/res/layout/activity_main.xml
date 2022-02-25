@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alignmentMode="alignBounds"
+        android:background="#BFD681"
+        android:columnCount="4"
+        android:rowCount="4">
+
+        <TextView
+            android:id="@+id/texto_conectar"
+            android:layout_width="107dp"
+            android:layout_height="60dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp"
+            android:layout_weight="0"
+            android:text="Menu de Layouts"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="120dp"
+            android:onClick="onClickFrame"
+            android:text="Frame Layout"
+            app:layout_constraintStart_toStartOf="@+id/btnRelative"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnLinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginTop="22dp"
+            android:onClick="onClickLinear"
+            android:text="Linear Layout"
+            app:layout_constraintStart_toStartOf="@+id/btnFrame"
+            app:layout_constraintTop_toBottomOf="@+id/btnFrame" />
+
+        <Button
+            android:id="@+id/btnRelative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="23dp"
+            android:onClick="onClickRelative"
+            android:text="Relative Layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLinear" />
+
+        <Button
+            android:id="@+id/btnTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_marginTop="24dp"
+            android:onClick="onClickTable"
+            android:text="Table Layout"
+            app:layout_constraintEnd_toEndOf="@+id/btnRelative"
+            app:layout_constraintTop_toBottomOf="@+id/btnRelative" />
+
+        <Button
+            android:id="@+id/btnGrid"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_marginTop="24dp"
+            android:onClick="onClickGrid"
+            android:text="Grid Layout"
+            app:layout_constraintStart_toStartOf="@+id/btnTable"
+            app:layout_constraintTop_toBottomOf="@+id/btnTable" />
+    </GridLayout>
+
+</android.support.constraint.ConstraintLayout>
